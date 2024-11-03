@@ -1,0 +1,28 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h2>Sign up</h2>
+
+    <form method="POST" action="/signin">
+    {% csrf_token %}
+        <label for="username">User name: </label>
+        <input type="text" id="username" name="username" placeholder="Enter your user name"><br>
+
+        <label for="pass1">Enter your password: </label>
+        <input type="password" id="pass1" name="pass1" placeholder="Enter your password"><br>
+
+
+        <button type="submit">Sign In </button>
+    </form>
+
+
+    
+    <script src="" async defer></script>
+</body>
+</html> {% endcomment %}
