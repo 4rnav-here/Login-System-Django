@@ -7,11 +7,29 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissable fade show" role="alert">
+        <strong>Message :</stromg>{{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+
+
     <h2>My Project</h2>
-    <button type="submit"> <a href="signup"> Sign up</a></button>
-    <button type="submit"> <a href="signin">Sign in<a/></button>
-    <button type="submit"> Signout</button>
+
+    {% if user.is_authenticated %}
+    <h3>Welcome, {{fname }}</h3
+    <h4> You are logged in</h4>
+    <button type="submit"> <a href="signout"> Signout</a></button>
     
+    {% else %}
+    <button type="submit"> <a href="signin">Sign in<a/></button>
+    <button type="submit"> <a href="signup"> Sign up</a></button>
+
+    {% endif %}
     <script src="" async defer></script>
 </body>
 </html>
